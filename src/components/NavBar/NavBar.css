@@ -1,0 +1,8 @@
+@media screen and (max-width: 480px) {
+  .switch-container {
+    position: fixed;
+    bottom: 18px;
+    right: 23px;
+    z-index: 100;
+  }
+}
