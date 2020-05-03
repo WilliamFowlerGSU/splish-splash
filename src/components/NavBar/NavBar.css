@@ -6,3 +6,28 @@
     z-index: 100;
   }
 }
+
+@media screen and (min-width: 480px) {
+  .Splish-logo {
+    width: 50 px;
+    height: 50 px;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  } */
+  .Splish-logo {
+    animation: Splish-logo-spin infinite 20s linear;
+  }
+}
+
+@keyframes Splish-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
