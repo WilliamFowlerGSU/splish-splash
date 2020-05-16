@@ -5,10 +5,27 @@ import withFirebaseAuth from "react-with-firebase-auth";
 import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "../../firebaseConfig";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  Collapse,
+  Container,
+  Navbar,
+  NavbarToggler,
+  NavbarBrand,
+  Nav,
+  NavItem,
+  NavLink,
+  Button,
+  UncontrolledDropdown,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem
+} from "reactstrap";
 
-import splishLogo from '../../logos/logo.png'
+import smallLogo from '../../logos/small-logo.png'
 import labelLogo from '../../logos/label.png'
 import './NavBar.css';
+
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
@@ -30,13 +47,14 @@ class NavBar extends Component {
       signOut,
       signInWithGoogle,
     } = this.props;
+    console.log(user)
 
     return (
       <div>
         <div>
           <div className="header" style={{ justifyContent: "space-between" }}>
             <header className="App-header">
-              <img src={splishLogo} className="Splish-logo" alt="logo" />
+              <img src={smallLogo} className="Splish-logo" alt="logo" />
               <img src={labelLogo} className="Label-logo" alt="nameLogo" />
               {
                 user
