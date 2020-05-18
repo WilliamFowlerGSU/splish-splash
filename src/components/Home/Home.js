@@ -6,7 +6,7 @@ function Home() {
 
 
   return (
-    iv>
+    <div>
 
     <h2>LAUNDRY SERVICES PRICE LIST</h2>
     <p>Wash, Dry, Fold, & Hang</p>

@@ -8,10 +8,7 @@
 }
 
 @media screen and (min-width: 480px) {
-  .Splish-logo {
-    width: 200 px;
-    height: 200 px;
-  }
+  
 }
 
 @media (prefers-reduced-motion: no-preference) {
