@@ -36,6 +36,7 @@ class NavBar extends Component {
           <header className="App-header">
             <img src={smallLogo} className="Splish-logo" alt="logo" />
             <img src={labelLogo} className="Label-logo" alt="nameLogo" />
+            <img src={smallLogo} className="Splish-logo" alt="logo" />
             {user ? <p>Hello, {user.displayName}</p> : <p>Please sign in.</p>}
             {user ? (
               <Button variant="contained" color="primary" onClick={signOut}>
