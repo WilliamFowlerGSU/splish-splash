@@ -6,21 +6,7 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "../../firebaseConfig";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  Collapse,
-  Container,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  Button,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem
-} from "reactstrap";
+import { Button } from "reactstrap";
 
 import smallLogo from '../../logos/small-logo.png'
 import labelLogo from '../../logos/label.png'
@@ -63,9 +49,18 @@ class NavBar extends Component {
               }
               {
                 user
-                  ? <button onClick={signOut}>Sign out</button>
-                  : <button onClick={signInWithGoogle}>Sign in with Google</button>
+                  ? <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={signOut}>Sign out</Button>
+                  : <Button
+                    id="qsLoginBtn"
+                    color="primary"
+                    className="btn-margin"
+                    onClick={signInWithGoogle}>Sign in with Google</Button>
               }
+              <Button>Another Button</Button>
             </header>
             {/* <ToggleSwitch value={admin} label="Admin" toggle={toggleAdmin} /> */}
           </div>
