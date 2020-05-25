@@ -32,26 +32,25 @@ class NavBar extends Component {
 
     return (
       <div>
-        <div className="header" style={{ justifyContent: "space-between" }}>
-          <header className="App-header">
+        <header className="App-header">
+          <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", width: "100vw" }}>
             <img src={smallLogo} className="Splish-logo" alt="logo" />
             <img src={labelLogo} className="Label-logo" alt="nameLogo" />
             <img src={smallLogo} className="Splish-logo" alt="logo" />
-            {user ? <p>Hello, {user.displayName}</p> : <p>Please sign in.</p>}
-            {user ? (
-              <Button variant="contained" color="primary" onClick={signOut}>
-                Sign out
-              </Button>
-            ) : (
+          </div>
+          {user ? <p>Hello, {user.displayName}</p> : <p>Please sign in.</p>}
+          {user ? (
+            <Button variant="contained" color="primary" onClick={signOut}>
+              Sign out
+            </Button>
+          ) : (
               <Button
-                variant="contained" color="primary" onClick={signInWithGoogle}
-              >
+                variant="contained" color="primary" onClick={signInWithGoogle}>
                 Sign in with Google
               </Button>
             )}
-          </header>
-          {/* <ToggleSwitch value={admin} label="Admin" toggle={toggleAdmin} /> */}
-        </div>
+        </header>
+        {/* <ToggleSwitch value={admin} label="Admin" toggle={toggleAdmin} /> */}
       </div>
     );
   }
