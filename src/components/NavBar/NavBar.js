@@ -1,16 +1,21 @@
 import React, { Component } from "react";
 //import { NavLink } from 'react-router-dom'
 //import ToggleSwitch from './ToggleSwitch/ToggleSwitch'
-import withFirebaseAuth from "react-with-firebase-auth";
-import * as firebase from "firebase/app";
+import withFirebaseAuth from 'react-with-firebase-auth';
+import * as firebase from 'firebase/app';
 import "firebase/auth";
-import firebaseConfig from "../../firebaseConfig";
+import firebaseConfig from '../../firebaseConfig';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Button from "@material-ui/core/Button";
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+// import smallLogo from "../../logos/small-logo.png";
+// import labelLogo from "../../logos/tm-brick.png";
 
-import smallLogo from "../../logos/small-logo.png";
-import labelLogo from "../../logos/label.png";
-import "./NavBar.css";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 const firebaseAppAuth = firebaseApp.auth();
@@ -31,27 +36,32 @@ class NavBar extends Component {
     console.log(user);
 
     return (
-      <div>
-        <header className="App-header">
-          <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-evenly", width: "100vw" }}>
-            <img src={smallLogo} className="Splish-logo" alt="logo" />
-            <img src={labelLogo} className="Label-logo" alt="nameLogo" />
-            <img src={smallLogo} className="Splish-logo" alt="logo" />
-          </div>
-          {user ? <p>Hello, {user.displayName}</p> : <p>Please sign in.</p>}
-          {user ? (
-            <Button variant="contained" color="primary" onClick={signOut}>
-              Sign out
-            </Button>
-          ) : (
-              <Button
-                variant="contained" color="primary" onClick={signInWithGoogle}>
-                Sign in with Google
-              </Button>
-            )}
-        </header>
-        {/* <ToggleSwitch value={admin} label="Admin" toggle={toggleAdmin} /> */}
-      </div>
+      <AppBar position="static">
+        <Toolbar>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" className={classes.title}>
+            News
+    </Typography>
+          <Button color="inherit">Login</Button>
+        </Toolbar>
+      </AppBar>
+      // <div style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", width: "100vw", height: "35vw" }}>
+      // <header className="App-header" style={{ backgroundImage: `url(${labelLogo})`, backgroundSize: "70vw 25vh", backgroundRepeat: "no-repeat" }}>
+      //   {user ? <p>Hello, {user.displayName}</p> : <p>Please sign in.</p>}
+      //   {user ? (
+      //     <Button variant="contained" color="primary" onClick={signOut}>
+      //       Sign out
+      //     </Button>
+      //   ) : (
+      //       <Button
+      //         variant="contained" color="primary" onClick={signInWithGoogle}>
+      //         Sign in with Google
+      //       </Button>
+      //     )}
+      // </header>
+      // </div>
     );
   }
 }

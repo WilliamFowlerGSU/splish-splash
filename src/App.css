@@ -7,20 +7,29 @@
   pointer-events: none;
 }
 
+.Label-logo {
+  width: 50%;
+  height: 50%;
+}
+
 .App-header {
-  background-color: #282c34;
-  min-height: 20vh;
+  min-height: 35vh;
   display: flex;
   width: 100vw;
-  flex-direction: column;
+  /* flex-direction: column;
   align-items: space-between;
-  justify-content: space-between;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between; */
+  font-size: calc(24px + 2vmin);
   color: white;
+  background-color: #282c34;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.Footer {
+  background-color: #282c34;
 }
 
 @media screen and (max-width: 480px) {
@@ -32,7 +41,7 @@
   }
 }
 
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 480px) {
   .switch-container {
     position: fixed;
     bottom: 18px;
