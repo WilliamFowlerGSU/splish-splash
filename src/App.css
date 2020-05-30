@@ -1,9 +1,10 @@
 .App {
   text-align: center;
+  overflow: hidden;
 }
 
 .Splish-logo {
-  height: 20vmin;
+  height: 10vmin;
   pointer-events: none;
 }
 
@@ -12,52 +13,16 @@
   height: 50%;
 }
 
-.App-header {
-  min-height: 35vh;
-  display: flex;
-  width: 100vw;
-  /* flex-direction: column;
-  align-items: space-between;
-  justify-content: space-between; */
-  font-size: calc(24px + 2vmin);
-  color: white;
-  background-color: #282c34;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
 .Footer {
-  background-color: #282c34;
+  background-color: #002243;
+  color: white;
 }
 
 @media screen and (max-width: 480px) {
-  .switch-container {
-    position: fixed;
-    bottom: 18px;
-    right: 23px;
-    z-index: 100;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .switch-container {
-    position: fixed;
-    bottom: 18px;
-    right: 23px;
-    z-index: 100;
-  }
-  .App-header {
-    background-color: #282c34;
-    min-height: 20vh;
-    display: flex;
-    width: 100vw;
-    flex-direction: column;
-    align-items: space-between;
-    justify-content: space-between;
-    font-size: calc(10px + 2vmin);
+  .Footer {
+    background-color: #002243;
     color: white;
+    font-size: 13px;
   }
   .Splish-logo {
     height: 15vmin;
